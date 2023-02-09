@@ -1,18 +1,21 @@
 <?php
 /*
-# interface - contain some method, which must be used when implements the interface in a class, all method in interface is abstract, so dont need to define abstract keyword. interface just declare method, which is implement method from different class in different way. classes can implement interface while inheriting a class at the same time.
+# interface - contain some method, which must be used when implements the interface in a class, 
+all method in interface is abstract, so dont need to define abstract keyword. interface just declare method, 
+which is implement method from different class in different way. 
+classes can implement interface while inheriting a class at the same time.
 */ 
-interface Employees {
+interface Employeess {
   public function task($name);
 }
 
-class Arif implements Employees {
+class Arif implements Employeess {
   public function task($name) {
     echo "$name Working in development <br>";
   }
 }
 
-class Arman implements Employees{
+class Arman implements Employeess{
     public function task($name){
         echo "$name Working in soft development <br>";
     }
