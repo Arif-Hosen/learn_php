@@ -1,0 +1,9 @@
+{
+    "name": "user/learn_php",
+    "autoload": {
+        "psr-4": {
+            "Car\\": "oop/autoload/car/"
+        }
+    },
+    "require": {}
+}
