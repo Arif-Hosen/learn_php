@@ -15,13 +15,13 @@ try {
     // pdo errormode to exception
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $statement = $connection->prepare("SELECT id, name, phone, email FROM employees WHERE(name = 'Arif Hosen') ORDER BY id");
+    $statement = $connection->prepare("SELECT id, name, phone, email FROM employees WHERE(name = 'Arif Hosen') ORDER BY id DESC");
     $statement->execute();
     // q- if i use below statement give correct array, if not i get twice
     ($statement->setFetchMode(PDO::FETCH_ASSOC));
+
     $datas = json_encode($statement->fetchAll());
     
-    var_dump($datas);
    
     echo "<h4 style='color:green'>Successfully Data Retrieve!</h4>";
     echo "<table>

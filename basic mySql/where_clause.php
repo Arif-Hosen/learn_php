@@ -12,13 +12,12 @@ try {
     // pdo error mode to exception
     $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $statement = $connection->prepare("SELECT name, id, phone, address FROM EMPLOYEES WHERE(name = ' Arif ')");
+    $statement = $connection->prepare("SELECT name, id, phone, address FROM EMPLOYEES WHERE(name = 'Arif Hosen')");
     $statement->execute();
 
     // var_dump( $statement->setFetchMode(PDO::FETCH_ASSOC));
     // var_dump($statement->fetchAll());
     $datas = json_encode($statement->fetchAll());
-
     echo "<h4 style='color:green'>Successfully Data Retrieve!</h4>";
     echo "<table>
     <thead>
